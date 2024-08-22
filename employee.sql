@@ -34,3 +34,21 @@ SELECT Ename,salary  from employee where salary > 2000000; -- this is single lin
 select Ename ,JobDesc ,salary from employee where Ename = "ramya"; 
 
 select Ename ,JobDesc ,salary from employee where Ename <> "ramya";  -- this will give list others 
+
+
+-- AND , OR operators
+
+select * from employee where salary>2600000 AND jobDesc = "Manager";  --both condtions are true output will show
+
+
+select * from employee where jobDesc="hr"or jobDesc="Manager";
+
+-- OR --------
+
+select * FROM employee WHERE jobDesc  IN("Hr","Manager");
+
+DESC employee;
+
+SELECT * FROM employee WHERE  jobDesc NOT IN("Ceo","Manager");
+
+SELECT Ename FROM employee WHERE  jobDesc NOT IN("Ceo","Manager");
